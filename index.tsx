@@ -6,6 +6,6 @@ import { Text } from 'react-native';
  const root = ReactDOM.createRoot(document.getElementById('root'))
  root.render(
    <React.StrictMode>
-     <Text>Olá Mundo!</Text>
+     <div>Olá Mundo2!</div>
    </React.StrictMode>
  )
