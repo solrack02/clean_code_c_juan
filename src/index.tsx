@@ -22,9 +22,9 @@
           const currRoute = 'home';
 
           let args: any = [];
-              console.log("SRC/INDEX.TSX 1");
 
-          const screens = [
+     console.log('SRC/INDEX.TSX 1');     const screens = [
+            
 
         (...args: any) => <Elements.Screen3 pass={{
           pathScreen:"home",
@@ -59,16 +59,15 @@
           args,
         }}/>
           ];
- console.log("SRC/INDEX.TSX 2");
 
           const initCt = () => (
  {
  true: "true" 
 } 
  );
-          const initObj = initCt();
+      console.log('SRC/INDEX.TSX 2');    const initObj = initCt(); console.log('SRC/INDEX.TSX 3');
           // console.log(initObj);
- console.log("SRC/INDEX.TSX 3");
+
           const arrInitFuncs = [
             ()=>{}
           ];
@@ -76,9 +75,7 @@
           export const useRoutes = create(() => ({ currRoute }));
           export const useData = create(() => initObj);
 
- console.log("SRC/INDEX.TSX 4");
-
-          // ---------- set Main Component
+     console.log('SRC/INDEX.TSX 4');     // ---------- set Main Component
           export const Router = () => {
             return (
               <Project
