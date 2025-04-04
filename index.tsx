@@ -7,7 +7,7 @@ import * as RN from 'react-native';
 import { Router } from './src';
 
 export default function App() {
-  return <><RN.Text>Tela:</RN.Text><Router /></>;
+  return <Router />;
 }
 
 RN.AppRegistry.registerComponent('App', () => App);
