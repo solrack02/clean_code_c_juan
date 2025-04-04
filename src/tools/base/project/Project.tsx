@@ -3,13 +3,8 @@
 import React from 'react';
 import * as RN from 'react-native';
 
-import { SafeAreaView, Platform, View } from 'react-native';
-import { StatusBar } from 'react-native';
-
 // ---------- import Variables Pack
-
 // ---------- import Local Tools
-import { mapElements } from './mapElements';
 
 // ---------- set Caps Inputs
 type Tprops = {
@@ -22,7 +17,8 @@ type Tprops = {
 
 // ---------- set Main Component
 export const Project = ({ configData }: Tprops) => {
-  console.log("INÍCIO PROJETO");
+  console.log('PROJETO 1');
+
   // ---------- set Data
   const { screens, arrInitFuncs } = configData;
 
@@ -35,25 +31,25 @@ export const Project = ({ configData }: Tprops) => {
     callFn().catch(err => console.log('Project Start Functions', { err }));
   }, []);
 
-  const condWeb = Platform.OS === 'web';
-  console.log("AQUI PROJETO 1", {screens});
-  
+  console.log('PROJETO 2');
+
+  const condWeb = RN.Platform.OS === 'web';
+
   const baseStl: RN.ViewStyle = {
     flexDirection: 'column',
     width: '100%',
     height: '100%',
   };
 
-  console.log("AQUI PROJETO 2");
+  console.log('PROJETO 3');
   return (
     <RN.View style={baseStl}>
-      <SafeAreaView
+      <RN.SafeAreaView
         style={{ width: '100%', height: '100%', overflow: 'hidden' }}
       >
-        {mapElements(screens)}
-
-        <StatusBar barStyle={'light-content'} />
-      </SafeAreaView>
+        <RN.Text>mapElements</RN.Text>
+        <RN.StatusBar barStyle={'light-content'} />
+      </RN.SafeAreaView>
     </RN.View>
   );
 };

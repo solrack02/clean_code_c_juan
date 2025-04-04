@@ -1,10 +1,10 @@
 
 // ---------- import Packs
 import React, { useEffect, useState } from 'react';
-import { Pressable, View, Text } from 'react-native';
+import { Pressable, View } from 'react-native';
 
 // ---------- import Local Tools
-import { getStlValues } from '../project';
+import { getStlValues, mapElements } from '../project';
 import { useRoutes } from '../../..';
 
 // ---------- Types
@@ -33,7 +33,6 @@ export const processFunctions = async (arr: any[]) => {
 
 // Screen3 (newBase)
 export const Screen3 = ({ pass }: Tprops) => {
-  console.log("INÍCIO DA TELA");
   const { pathScreen } = pass;
   const currRoute = useRoutes(ct => ct.currRoute);
   const condShow = pathScreen === currRoute;
@@ -68,7 +67,7 @@ function Screen3Render({ pass }: Tprops) {
 
   // ---------- set Render
   if (!sttTypeFunc) {
-    return <View style={stl}><Text>mapElements</Text></View>;
+    return <View style={stl}>{mapElements(screenElements, args)}</View>;
   }
 
   if (sttTypeFunc === 'on press') {
@@ -77,12 +76,12 @@ function Screen3Render({ pass }: Tprops) {
     };
     return (
       <Pressable style={stl} onPress={onPressFunc}>
-        <Text>mapElements</Text>
+        {mapElements(screenElements, args)}
       </Pressable>
     );
   }
 
   if (sttTypeFunc === 'on init') {
-    return <View style={stl}><Text>mapElements</Text></View>;
+    return <View style={stl}>{mapElements(screenElements, args)}</View>;
   }
 }
