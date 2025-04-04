@@ -22,6 +22,7 @@ type Tprops = {
 
 // ---------- set Main Component
 export const Project = ({ configData }: Tprops) => {
+  console.log("INÍCIO PROJETO");
   // ---------- set Data
   const { screens, arrInitFuncs } = configData;
 
@@ -35,13 +36,15 @@ export const Project = ({ configData }: Tprops) => {
   }, []);
 
   const condWeb = Platform.OS === 'web';
-
+  console.log("AQUI PROJETO 1", {screens});
+  
   const baseStl: RN.ViewStyle = {
     flexDirection: 'column',
     width: '100%',
     height: '100%',
   };
 
+  console.log("AQUI PROJETO 2");
   return (
     <RN.View style={baseStl}>
       <SafeAreaView
