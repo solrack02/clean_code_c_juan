@@ -1,7 +1,7 @@
 
 // ---------- import Packs
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
 // ---------- import Local Tools
 import { getStlValues, mapElements } from '../project';
@@ -19,6 +19,8 @@ type Tprops = {
 
 // Screen (newBase)
 export const Screen = (props: Tprops) => {
+  console.log("Início da Tela");
+  
   const { pathScreen } = props.pass;
   const currRoute = useRoutes(ct => ct.currRoute);
   const condShow = pathScreen === currRoute;
@@ -41,5 +43,5 @@ function ScreenRender(props: Tprops) {
   const stl = getStlValues(styles);
 
   // ---------- set Render
-  return <View style={[stl]}>{mapElements(screenElements, args)}</View>;
+  return <View style={[stl]}><Text>mapElements</Text></View>;
 }
