@@ -22,9 +22,9 @@
           const currRoute = 'home';
 
           let args: any = [];
+              console.log("SRC/INDEX.TSX 1");
 
           const screens = [
-              console.log("SRC/INDEX.TSX 1");
 
         (...args: any) => <Elements.Screen3 pass={{
           pathScreen:"home",
