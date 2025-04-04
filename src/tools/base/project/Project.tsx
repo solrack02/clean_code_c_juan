@@ -48,7 +48,6 @@ export const Project = ({ configData }: Tprops) => {
       <SafeAreaView
         style={{ width: '100%', height: '100%', overflow: 'hidden' }}
       >
-<RN.Text>mapElements</RN.Text>
         {mapElements(screens)}
 
         <StatusBar barStyle={'light-content'} />
