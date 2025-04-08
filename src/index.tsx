@@ -40,6 +40,7 @@
               ],
 
           screenElements:[
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:['{}'],
@@ -57,7 +58,38 @@
 
             args,
           }}/>
-        ],
+        , 
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            `{color: "#fff"}`
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            '{}'
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>],
 
           functions:[()=>{}],
 
